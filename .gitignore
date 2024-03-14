@@ -300,3 +300,7 @@ _deps
 build.ninja
 # Build directory
 /build
+/assets
+/filesystem
+*.z64
+/.vscode

@@ -67,7 +67,7 @@ const char* translations::GetTranslation(Msg id)
 	auto text = Translations.Get(id, CurrentLanguage);
 
 	// Fallback to English if available
-	if (text == nullptr) 
+	if (text == nullptr)
 	{
 		text = Translations.Get(id, Lang::English);
 		if (text == nullptr)
@@ -77,22 +77,22 @@ const char* translations::GetTranslation(Msg id)
 	return text;
 }
 
-void translations::GetGlyphRange(ImVector<ImWchar>* ranges)
-{
-	ImFontGlyphRangesBuilder builder;
+// void translations::GetGlyphRange(ImVector<ImWchar>* ranges)
+// {
+// 	ImFontGlyphRangesBuilder builder;
 
-	for (int i = 0; i < (int)Msg::Max; i++)
-	{
-		const char* translation = GetTranslation((Msg)i);
-		if (translation)
-		{
-			builder.AddText(translation);
-		}
-	}
+// 	for (int i = 0; i < (int)Msg::Max; i++)
+// 	{
+// 		const char* translation = GetTranslation((Msg)i);
+// 		if (translation)
+// 		{
+// 			builder.AddText(translation);
+// 		}
+// 	}
 
-	builder.AddRanges(ImGui::GetIO().Fonts->GetGlyphRangesDefault());
-	builder.BuildRanges(ranges);
-}
+// 	builder.AddRanges(ImGui::GetIO().Fonts->GetGlyphRangesDefault());
+// 	builder.BuildRanges(ranges);
+// }
 
 const TextArray translations::Translations =
 {
