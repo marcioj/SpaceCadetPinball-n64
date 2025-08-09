@@ -457,7 +457,7 @@ void render::PresentVScreen()
     unsigned long size = vscreen->Texture->height * vscreen->Texture->stride;
     data_cache_hit_writeback(vscreen->Texture->buffer, size);
 
-    rdpq_tex_blit(vscreen->Texture, offset_x + 24, offset_y + 24, &blit_parms);
+    rdpq_tex_blit(vscreen->Texture, offset_x + 25, offset_y + 25, &blit_parms);
 
     // if (offset_x == 0 && offset_y == 0)
     // {

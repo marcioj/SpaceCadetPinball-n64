@@ -69,11 +69,11 @@ int winmain::WinMain(LPCSTR lpCmdLine)
     //     pb::ShowMessageBox(1, "Could not initialize SDL2", SDL_GetError());
     //     return 1;
     // }
+    assert_memory_expanded();
     debug_init_isviewer();
     debug_init_usblog();
     dfs_init(DFS_DEFAULT_LOCATION);
-    // display_init(RESOLUTION_640x480, DEPTH_32_BPP, 2, GAMMA_NONE, FILTERS_DISABLED);
-    display_init(RESOLUTION_640x480, DEPTH_16_BPP, 2, GAMMA_NONE, FILTERS_RESAMPLE);
+    display_init(RESOLUTION_640x480, DEPTH_16_BPP, 2, GAMMA_NONE, FILTERS_DISABLED);
     joypad_init();
     rdpq_init();
     // rdpq_debug_start();

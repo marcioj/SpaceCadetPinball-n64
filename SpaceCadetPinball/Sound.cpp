@@ -169,7 +169,8 @@ void Sound::SetChannels(int channels)
 
 void Sound::SetVolume(int volume)
 {
-    // Volume = volume;
+    Volume = volume;
+    mixer_set_vol(volume / 128.0f);
     // if (MixOpen)
     //     Mix_Volume(-1, volume);
 }

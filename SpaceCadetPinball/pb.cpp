@@ -134,10 +134,10 @@ void pb::SelectDatFile(const std::vector<const char *> &dataSearchPaths)
     DatFileName.clear();
     FullTiltDemoMode = FullTiltMode = false;
 
-    std::string datFileNames[3]{
-        "CADET.DAT",
+    std::string datFileNames[]{
+        // "CADET.DAT",
         "PINBALL.DAT",
-        "DEMO.DAT",
+        // "DEMO.DAT",
     };
 
     // Default game data test order: CADET.DAT, PINBALL.DAT, DEMO.DAT
@@ -171,7 +171,7 @@ void pb::SelectDatFile(const std::vector<const char *> &dataSearchPaths)
                         FullTiltMode = true;
                     if (datFileName == "DEMO.DAT")
                         FullTiltDemoMode = FullTiltMode = true;
-                    printf("Loading game from: %s\n", datFilePath.c_str());
+                    debugf("Loading game from: %s\n", datFilePath.c_str());
                     return;
                 }
             }
